@@ -11,7 +11,7 @@
 
 :if ($leaseBound = 1) do={
 #Check if the hostname is empty. If it is, skipping erase or add a static entry on DNS...
-    :if ($lease-hostname = nil) do={
+    :if ($"lease-hostname" = "") do={
     :log info "DNS Static: Empty hostname for $leaseActIP. Ignoring static DNS entry..."
     } else={
 #Make the full hostname to search on DNS entry's
